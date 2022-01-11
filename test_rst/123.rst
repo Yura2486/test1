@@ -41,82 +41,82 @@
 
 .. code-block:: bash
 
-Запуск без аргументів.
+    Запуск без аргументів.
 
-./dkr.o                                                                                                                                                                                                           ✔
-No arguments!
+    ./dkr.o                                                                                                                                                                                                           ✔
+    No arguments!
 
-This program accepts an arbitrary number
-of X Y coordinates for points and displays the coordinates
-of the central (equidistant from the rest) point.
-Arguments:
-        --verbose (-v)  The program displays the performed actions in detail.
-        --dist          The program displays the distance from an equidistant
-                        point to other points.
-        --help          View help.
-.. code-block:: bash
-Input example: ./dkr.o -v --dist 0 0 10 0
+    This program accepts an arbitrary number
+    of X Y coordinates for points and displays the coordinates
+    of the central (equidistant from the rest) point.
+    Arguments:
+            --verbose (-v)  The program displays the performed actions in detail.
+            --dist          The program displays the distance from an equidistant
+                            point to other points.
+            --help          View help.
 
-Простий приклад для двох точок.
+    Input example: ./dkr.o -v --dist 0 0 10 0
 
-./dkr.o --dist -v 0 0 2 2
--v captured
-argv[0] = ./dkr.o
-argv[1] = --dist
-argv[2] = -v
-argv[3] = 0
-argv[4] = 0
-argv[5] = 2
-argv[6] = 2
-argc = 7
-[Point_0] X 0.000000, Y 0.000000
-[Point_1] X 2.000000, Y 2.000000
-[Point_2] X 1.000000, Y 1.000000
-Equidistant point and distance (if --dist is available):
-1.000000 1.000000
-1.414214
+    Простий приклад для двох точок.
 
-Квадрат з стороною 1 в першій чверті координатної площини.
+    ./dkr.o --dist -v 0 0 2 2
+    -v captured
+    argv[0] = ./dkr.o
+    argv[1] = --dist
+    argv[2] = -v
+    argv[3] = 0
+    argv[4] = 0
+    argv[5] = 2
+    argv[6] = 2
+    argc = 7
+    [Point_0] X 0.000000, Y 0.000000
+    [Point_1] X 2.000000, Y 2.000000
+    [Point_2] X 1.000000, Y 1.000000
+    Equidistant point and distance (if --dist is available):
+    1.000000 1.000000
+    1.414214
 
-./dkr.o 0 0 0 1 1 0 1 1
-0.500000 0.500000
+    Квадрат з стороною 1 в першій чверті координатної площини.
 
-Те ж саме, як у попередньому прикладі. Детальніше.
+    ./dkr.o 0 0 0 1 1 0 1 1
+    0.500000 0.500000
 
-./dkr.o -v --dist 0 0 0 1 1 0 1 1
--v captured
---dist captured
-argv[0] = ./dkr.o
-argv[1] = -v
-argv[2] = --dist
-argv[3] = 0
-argv[4] = 0
-argv[5] = 0
-argv[6] = 1
-argv[7] = 1
-argv[8] = 0
-argv[9] = 1
-argv[10] = 1
-argc = 11
-[Point_0] X 0.000000, Y 0.000000
-[Point_1] X 0.000000, Y 1.000000
-[Point_2] X 1.000000, Y 0.000000
-[Point_3] X 1.000000, Y 1.000000
-[Point_4] X 0.500000, Y 0.500000
-Equidistant point and distance (if --dist is available):
-0.500000 0.500000
-0.707107
+    Те ж саме, як у попередньому прикладі. Детальніше.
 
-Неправильно задана остання точка.
+    ./dkr.o -v --dist 0 0 0 1 1 0 1 1
+    -v captured
+    --dist captured
+    argv[0] = ./dkr.o
+    argv[1] = -v
+    argv[2] = --dist
+    argv[3] = 0
+    argv[4] = 0
+    argv[5] = 0
+    argv[6] = 1
+    argv[7] = 1
+    argv[8] = 0
+    argv[9] = 1
+    argv[10] = 1
+    argc = 11
+    [Point_0] X 0.000000, Y 0.000000
+    [Point_1] X 0.000000, Y 1.000000
+    [Point_2] X 1.000000, Y 0.000000
+    [Point_3] X 1.000000, Y 1.000000
+    [Point_4] X 0.500000, Y 0.500000
+    Equidistant point and distance (if --dist is available):
+    0.500000 0.500000
+    0.707107
 
-./dkr.o -v --dist 0 0 0 1 1 0 1 1 5
--v captured
---dist captured
-Invalid point!
+    Неправильно задана остання точка.
 
-Для даної конфігурації точок неможливо знайти рівновіддалену точку:
+    ./dkr.o -v --dist 0 0 0 1 1 0 1 1 5
+    -v captured
+    --dist captured
+    Invalid point!
 
-./dkr.o --dist 0 0 0 1 1 0 1 1 5 5
-Cannot find an equidistant point for a given set of points!
+    Для даної конфігурації точок неможливо знайти рівновіддалену точку:
 
-    Отже, програма правильно обробляє передані для неї дані.
+    ./dkr.o --dist 0 0 0 1 1 0 1 1 5 5
+    Cannot find an equidistant point for a given set of points!
+
+Отже, програма правильно обробляє передані для неї дані.
