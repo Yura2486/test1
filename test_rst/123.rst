@@ -119,4 +119,10 @@
     ./dkr.o --dist 0 0 0 1 1 0 1 1 5 5
     Cannot find an equidistant point for a given set of points!
 
+    Від'ємні координати:
+
+    ./dkr.o --dist -20 -20 20 20
+    0.000000 0.000000
+    28.284271
+
 Отже, програма правильно обробляє передані для неї дані.
