@@ -44,8 +44,8 @@
 Запуск без аргументів.
 
 ./dkr.o                                                                                                                                                                                                           ✔
-    No arguments!
-------------------------------------------------------------------------
+No arguments!
+
 This program accepts an arbitrary number
 of X Y coordinates for points and displays the coordinates
 of the central (equidistant from the rest) point.
@@ -54,10 +54,9 @@ Arguments:
         --dist          The program displays the distance from an equidistant
                         point to other points.
         --help          View help.
-
-Input example: ./dkr.o -v --dist 0 0 10 0
-------------------------------------------------------------------------
 .. code-block:: bash
+Input example: ./dkr.o -v --dist 0 0 10 0
+
 Простий приклад для двох точок.
 
 ./dkr.o --dist -v 0 0 2 2
